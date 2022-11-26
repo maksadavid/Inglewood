@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		EB895F332932025A00ABDBA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F322932025A00ABDBA7 /* AppDelegate.swift */; };
-		EB895F352932025A00ABDBA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F342932025A00ABDBA7 /* SceneDelegate.swift */; };
-		EB895F372932025A00ABDBA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F362932025A00ABDBA7 /* ViewController.swift */; };
-		EB895F3A2932025A00ABDBA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB895F382932025A00ABDBA7 /* Main.storyboard */; };
 		EB895F3C2932025B00ABDBA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB895F3B2932025B00ABDBA7 /* Assets.xcassets */; };
 		EB895F3F2932025B00ABDBA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB895F3D2932025B00ABDBA7 /* LaunchScreen.storyboard */; };
 		EB895F4A2932025C00ABDBA7 /* InglewoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F492932025C00ABDBA7 /* InglewoodTests.swift */; };
 		EB895F542932025C00ABDBA7 /* InglewoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F532932025C00ABDBA7 /* InglewoodUITests.swift */; };
 		EB895F562932025C00ABDBA7 /* InglewoodUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F552932025C00ABDBA7 /* InglewoodUITestsLaunchTests.swift */; };
+		EB895F632932032900ABDBA7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F622932032900ABDBA7 /* AppCoordinator.swift */; };
+		EB895F652932041100ABDBA7 /* VehiculesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F642932041100ABDBA7 /* VehiculesRepository.swift */; };
+		EB895F69293204F900ABDBA7 /* VehiculesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F68293204F900ABDBA7 /* VehiculesViewModel.swift */; };
+		EB895F6B2932052500ABDBA7 /* VehiculesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F6A2932052500ABDBA7 /* VehiculesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +39,6 @@
 /* Begin PBXFileReference section */
 		EB895F2F2932025A00ABDBA7 /* Inglewood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inglewood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB895F322932025A00ABDBA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB895F342932025A00ABDBA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB895F362932025A00ABDBA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EB895F392932025A00ABDBA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB895F3B2932025B00ABDBA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB895F3E2932025B00ABDBA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB895F402932025B00ABDBA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +47,10 @@
 		EB895F4F2932025C00ABDBA7 /* InglewoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InglewoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB895F532932025C00ABDBA7 /* InglewoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InglewoodUITests.swift; sourceTree = "<group>"; };
 		EB895F552932025C00ABDBA7 /* InglewoodUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InglewoodUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EB895F622932032900ABDBA7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EB895F642932041100ABDBA7 /* VehiculesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiculesRepository.swift; sourceTree = "<group>"; };
+		EB895F68293204F900ABDBA7 /* VehiculesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiculesViewModel.swift; sourceTree = "<group>"; };
+		EB895F6A2932052500ABDBA7 /* VehiculesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiculesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				EB895F322932025A00ABDBA7 /* AppDelegate.swift */,
-				EB895F342932025A00ABDBA7 /* SceneDelegate.swift */,
-				EB895F362932025A00ABDBA7 /* ViewController.swift */,
-				EB895F382932025A00ABDBA7 /* Main.storyboard */,
 				EB895F3B2932025B00ABDBA7 /* Assets.xcassets */,
 				EB895F3D2932025B00ABDBA7 /* LaunchScreen.storyboard */,
 				EB895F402932025B00ABDBA7 /* Info.plist */,
+				EB895F662932044D00ABDBA7 /* UserInterface */,
+				EB895F6D2932079200ABDBA7 /* BusinessLogic */,
 			);
 			path = Inglewood;
 			sourceTree = "<group>";
@@ -125,6 +126,32 @@
 				EB895F552932025C00ABDBA7 /* InglewoodUITestsLaunchTests.swift */,
 			);
 			path = InglewoodUITests;
+			sourceTree = "<group>";
+		};
+		EB895F662932044D00ABDBA7 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				EB895F622932032900ABDBA7 /* AppCoordinator.swift */,
+				EB895F6C2932077400ABDBA7 /* Vehicules */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		EB895F6C2932077400ABDBA7 /* Vehicules */ = {
+			isa = PBXGroup;
+			children = (
+				EB895F68293204F900ABDBA7 /* VehiculesViewModel.swift */,
+				EB895F6A2932052500ABDBA7 /* VehiculesViewController.swift */,
+			);
+			path = Vehicules;
+			sourceTree = "<group>";
+		};
+		EB895F6D2932079200ABDBA7 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				EB895F642932041100ABDBA7 /* VehiculesRepository.swift */,
+			);
+			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +260,6 @@
 			files = (
 				EB895F3F2932025B00ABDBA7 /* LaunchScreen.storyboard in Resources */,
 				EB895F3C2932025B00ABDBA7 /* Assets.xcassets in Resources */,
-				EB895F3A2932025A00ABDBA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB895F372932025A00ABDBA7 /* ViewController.swift in Sources */,
+				EB895F632932032900ABDBA7 /* AppCoordinator.swift in Sources */,
+				EB895F6B2932052500ABDBA7 /* VehiculesViewController.swift in Sources */,
 				EB895F332932025A00ABDBA7 /* AppDelegate.swift in Sources */,
-				EB895F352932025A00ABDBA7 /* SceneDelegate.swift in Sources */,
+				EB895F652932041100ABDBA7 /* VehiculesRepository.swift in Sources */,
+				EB895F69293204F900ABDBA7 /* VehiculesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +325,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EB895F382932025A00ABDBA7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB895F392932025A00ABDBA7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EB895F3D2932025B00ABDBA7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +462,7 @@
 				INFOPLIST_FILE = Inglewood/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +490,7 @@
 				INFOPLIST_FILE = Inglewood/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
