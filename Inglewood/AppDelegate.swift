@@ -10,13 +10,14 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let window = UIWindow()
+    var window: UIWindow?
     let appCoordinator = AppCoordinator()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window.rootViewController = appCoordinator.rootController
+        window = UIWindow()
+        window?.rootViewController = appCoordinator.rootController
         appCoordinator.start()
-        window.makeKeyAndVisible()
+        window?.makeKeyAndVisible()
         return true
     }
 

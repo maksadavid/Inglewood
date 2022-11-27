@@ -17,6 +17,10 @@
 		EB895F652932041100ABDBA7 /* VehiculesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F642932041100ABDBA7 /* VehiculesRepository.swift */; };
 		EB895F69293204F900ABDBA7 /* VehiculesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F68293204F900ABDBA7 /* VehiculesViewModel.swift */; };
 		EB895F6B2932052500ABDBA7 /* VehiculesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F6A2932052500ABDBA7 /* VehiculesViewController.swift */; };
+		EB895F712932093900ABDBA7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F702932093900ABDBA7 /* APIService.swift */; };
+		EB895F73293209C500ABDBA7 /* Vehicule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F72293209C500ABDBA7 /* Vehicule.swift */; };
+		EB895F7529329B0500ABDBA7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F7429329B0500ABDBA7 /* Location.swift */; };
+		EB895F79293397A800ABDBA7 /* VehiculeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F78293397A800ABDBA7 /* VehiculeStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		EB895F642932041100ABDBA7 /* VehiculesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiculesRepository.swift; sourceTree = "<group>"; };
 		EB895F68293204F900ABDBA7 /* VehiculesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiculesViewModel.swift; sourceTree = "<group>"; };
 		EB895F6A2932052500ABDBA7 /* VehiculesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiculesViewController.swift; sourceTree = "<group>"; };
+		EB895F702932093900ABDBA7 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		EB895F72293209C500ABDBA7 /* Vehicule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicule.swift; sourceTree = "<group>"; };
+		EB895F7429329B0500ABDBA7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		EB895F78293397A800ABDBA7 /* VehiculeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiculeStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 				EB895F402932025B00ABDBA7 /* Info.plist */,
 				EB895F662932044D00ABDBA7 /* UserInterface */,
 				EB895F6D2932079200ABDBA7 /* BusinessLogic */,
+				EB895F6E2932082D00ABDBA7 /* DataAccess */,
 			);
 			path = Inglewood;
 			sourceTree = "<group>";
@@ -150,8 +159,19 @@
 			isa = PBXGroup;
 			children = (
 				EB895F642932041100ABDBA7 /* VehiculesRepository.swift */,
+				EB895F72293209C500ABDBA7 /* Vehicule.swift */,
+				EB895F7429329B0500ABDBA7 /* Location.swift */,
+				EB895F78293397A800ABDBA7 /* VehiculeStore.swift */,
 			);
 			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		EB895F6E2932082D00ABDBA7 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				EB895F702932093900ABDBA7 /* APIService.swift */,
+			);
+			path = DataAccess;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +306,12 @@
 			files = (
 				EB895F632932032900ABDBA7 /* AppCoordinator.swift in Sources */,
 				EB895F6B2932052500ABDBA7 /* VehiculesViewController.swift in Sources */,
+				EB895F7529329B0500ABDBA7 /* Location.swift in Sources */,
 				EB895F332932025A00ABDBA7 /* AppDelegate.swift in Sources */,
+				EB895F73293209C500ABDBA7 /* Vehicule.swift in Sources */,
 				EB895F652932041100ABDBA7 /* VehiculesRepository.swift in Sources */,
+				EB895F712932093900ABDBA7 /* APIService.swift in Sources */,
+				EB895F79293397A800ABDBA7 /* VehiculeStore.swift in Sources */,
 				EB895F69293204F900ABDBA7 /* VehiculesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

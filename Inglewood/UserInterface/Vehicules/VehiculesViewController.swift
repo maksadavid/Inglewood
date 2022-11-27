@@ -9,7 +9,8 @@ import UIKit
 
 class VehiculesViewController: UIViewController {
     
-    let viewModel: VehiculesViewModel
+    private let viewModel: VehiculesViewModel
+    private let tableview = UITableView()
     
     init(viewModel: VehiculesViewModel) {
         self.viewModel = viewModel
@@ -22,7 +23,46 @@ class VehiculesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
+        
+        tableview.dataSource = self
+        tableview.delegate = self
+        view.addSubview(tableview)
+        tableview.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableview.topAnchor.constraint(equalTo: view.topAnchor),
+            tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableview.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableview.rightAnchor.constraint(equalTo: view.rightAnchor)
+        ])
+        
+        viewModel.onUpdate = { [weak self] in
+            self?.tableview.reloadData()
+        }
     }
     
 }
+
+// Mark: - UITableViewDataSource
+
+extension VehiculesViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.vehicules.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let vehicule = viewModel.vehicules[indexPath.item]
+        let reuseId = "cell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId) ??
+        UITableViewCell(style: .subtitle, reuseIdentifier: reuseId)
+        cell.textLabel?.text = vehicule.vehicleId
+        return cell
+    }
+}
+
+// Mark: - UITableViewDelegate
+
+extension VehiculesViewController: UITableViewDelegate {
+    
+}
+
