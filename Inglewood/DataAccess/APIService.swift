@@ -15,6 +15,7 @@ class APIService {
     
     func getVehicules(completion: @escaping ([Vehicule]?, Error?) ->()) {
         var request = URLRequest(url: baseUrl.appendingPathComponent("vehicles"))
+        request.timeoutInterval = 5
         request.addValue(apiKey, forHTTPHeaderField: authHeader)
         URLSession.shared.dataTask(with: request) { data, _, error in
             if error == nil,
@@ -29,6 +30,7 @@ class APIService {
     
     func getVehiculeDetails(id: String, completion: @escaping (Vehicule?, Error?) ->()) {
         var request = URLRequest(url: baseUrl.appendingPathComponent("vehicles/\(id)"))
+        request.timeoutInterval = 5
         request.addValue(apiKey, forHTTPHeaderField: authHeader)
         URLSession.shared.dataTask(with: request) { data, _, error in
             if error == nil,

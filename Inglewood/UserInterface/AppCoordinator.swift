@@ -14,8 +14,20 @@ class AppCoordinator {
     let vehiculesRepository = VehiculesRepository(apiService: APIService())
     
     func start() {
-        let viewModel = VehiculesViewModel(vehiculesRepository: vehiculesRepository)
+        let viewModel = VehiculesViewModel(
+            vehiculesRepository: vehiculesRepository,
+            appCoordinator: self
+        )
         let viewController = VehiculesViewController(viewModel: viewModel)
         rootController.pushViewController(viewController, animated: false)
+    }
+    
+    func showVehiculeDetails(vehiculeId: String) {
+        let viewModel = VehiculeDetailsViewModel(
+            vehiculesRepository: vehiculesRepository,
+            vehiculeId: vehiculeId
+        )
+        let viewController = VehiculeDetailsViewController(viewModel: viewModel)
+        rootController.pushViewController(viewController, animated: true)
     }
 }

@@ -56,6 +56,11 @@ extension VehiculesViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseId) ??
         UITableViewCell(style: .subtitle, reuseIdentifier: reuseId)
         cell.textLabel?.text = vehicule.vehicleId
+        if let location = vehicule.location {
+            cell.detailTextLabel?.text = location.isCloseToInglewood ? "close" : "far away"
+        } else {
+            cell.detailTextLabel?.text = "Fetching location data ..."
+        }
         return cell
     }
 }
@@ -63,6 +68,11 @@ extension VehiculesViewController: UITableViewDataSource {
 // Mark: - UITableViewDelegate
 
 extension VehiculesViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vehicule = viewModel.vehicules[indexPath.item]
+        viewModel.showVehiculeDetails(vehiculeId: vehicule.vehicleId)
+    }
     
 }
 
