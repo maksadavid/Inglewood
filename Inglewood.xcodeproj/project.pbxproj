@@ -23,6 +23,7 @@
 		EB895F79293397A800ABDBA7 /* VehiculeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F78293397A800ABDBA7 /* VehiculeStore.swift */; };
 		EB895F7E29354F5300ABDBA7 /* VehiculeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F7D29354F5300ABDBA7 /* VehiculeDetailsViewController.swift */; };
 		EB895F8029354FC000ABDBA7 /* VehiculeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F7F29354FC000ABDBA7 /* VehiculeDetailsViewModel.swift */; };
+		EB895F8229355C1700ABDBA7 /* MockApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB895F8129355C1700ABDBA7 /* MockApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		EB895F78293397A800ABDBA7 /* VehiculeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiculeStore.swift; sourceTree = "<group>"; };
 		EB895F7D29354F5300ABDBA7 /* VehiculeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiculeDetailsViewController.swift; sourceTree = "<group>"; };
 		EB895F7F29354FC000ABDBA7 /* VehiculeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiculeDetailsViewModel.swift; sourceTree = "<group>"; };
+		EB895F8129355C1700ABDBA7 /* MockApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				EB895F492932025C00ABDBA7 /* InglewoodTests.swift */,
+				EB895F8129355C1700ABDBA7 /* MockApiService.swift */,
 			);
 			path = InglewoodTests;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB895F8229355C1700ABDBA7 /* MockApiService.swift in Sources */,
 				EB895F4A2932025C00ABDBA7 /* InglewoodTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +509,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -533,6 +538,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

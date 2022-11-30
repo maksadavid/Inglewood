@@ -11,7 +11,7 @@ import UIKit
 class AppCoordinator {
     
     let rootController = UINavigationController()
-    let vehiculesRepository = VehiculesRepository(apiService: APIService())
+    let vehiculesRepository = VehiculesRepository(apiService: APIServiceImpl())
     
     func start() {
         let viewModel = VehiculesViewModel(

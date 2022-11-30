@@ -7,7 +7,14 @@
 
 import Foundation
 
-class APIService {
+protocol APIService {
+    
+    func getVehicules(completion: @escaping ([Vehicule]?, Error?) ->())
+    func getVehiculeDetails(id: String, completion: @escaping (Vehicule?, Error?) ->())
+    
+}
+
+class APIServiceImpl: APIService {
     
     let baseUrl = URL(string:"https://5w53f1x8oa.execute-api.eu-west-1.amazonaws.com/dev")!
     let apiKey = "tpdsRCyD8t2fcokyUmBuo2wBxXS5S726Pe3fIaXd"

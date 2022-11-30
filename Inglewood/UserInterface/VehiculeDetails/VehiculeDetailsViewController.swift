@@ -23,6 +23,7 @@ class VehiculeDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         textLabel.numberOfLines = 0
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(textLabel)
@@ -30,7 +31,11 @@ class VehiculeDetailsViewController: UIViewController {
             textLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             textLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateView()
         viewModel.onUpdate = { [weak self] in
             self?.updateView()
         }
@@ -43,6 +48,9 @@ class VehiculeDetailsViewController: UIViewController {
 extension VehiculeDetailsViewController {
     
     func updateView() {
+        if let count = viewModel.numberOfVehiculesCloseToInglewood {
+            title = "close: \(count)"
+        }
         guard let vehicule = viewModel.vehicule else {
             textLabel.text = ""
             return

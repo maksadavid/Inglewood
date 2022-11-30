@@ -23,7 +23,6 @@ class VehiculesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableview.dataSource = self
         tableview.delegate = self
         view.addSubview(tableview)
@@ -34,10 +33,20 @@ class VehiculesViewController: UIViewController {
             tableview.leftAnchor.constraint(equalTo: view.leftAnchor),
             tableview.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateView()
         viewModel.onUpdate = { [weak self] in
-            self?.tableview.reloadData()
+            self?.updateView()
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        title = ""
+        viewModel.onUpdate = nil
     }
     
 }
@@ -74,5 +83,19 @@ extension VehiculesViewController: UITableViewDelegate {
         viewModel.showVehiculeDetails(vehiculeId: vehicule.vehicleId)
     }
     
+}
+
+// Mark: - Private
+
+private extension VehiculesViewController {
+    
+    func updateView() {
+        tableview.reloadData()
+        if let count = viewModel.numberOfVehiculesCloseToInglewood {
+            title = "close: \(count)"
+        } else {
+            title = ""
+        }
+    }
 }
 

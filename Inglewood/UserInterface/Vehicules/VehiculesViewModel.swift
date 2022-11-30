@@ -13,6 +13,7 @@ class VehiculesViewModel {
     private let vehiculesRepository: VehiculesRepository
     private let appCoordinator: AppCoordinator
     private(set) var vehicules = [Vehicule]()
+    private(set) var numberOfVehiculesCloseToInglewood: Int?
     private var cancellable: Cancellable?
     var onUpdate: (()->())?
     
@@ -42,6 +43,9 @@ private extension VehiculesViewModel {
                 .throttle(for: 0.1, scheduler: RunLoop.main, latest: true)
                 .sink(receiveValue: { [weak self] vehicules in
                     self?.vehicules = vehicules
+                    self?.numberOfVehiculesCloseToInglewood = vehicules.filter {
+                        $0.location?.isCloseToInglewood ?? false
+                    }.count
                     self?.onUpdate?()
                 })
         }
